@@ -18,7 +18,7 @@ export const NavUpperbarre = () => {
 
       <div className="flex w-[407.81px] items-center gap-[27px]  relative ">
         <Link
-          href={"/"}
+          href={"/universites"}
           className="relative   [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
           Universités

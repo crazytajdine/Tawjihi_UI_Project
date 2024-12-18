@@ -1,15 +1,21 @@
-import Events from "./components/main_Components/Qustions/Events";
-import LabelEvents from "./components/main_Components/Qustions/LabelEvents";
+import Events from "./components/main_Components/Events/Events";
+import LabelEvents from "./components/main_Components/Events/LabelEvents";
+import { Questions } from "./components/main_Components/Qustions/Questions";
+import { Sponsors } from "./components/main_Components/Sponsors/Sponsors";
 import { NavMain } from "./components/main_Components/TableSearch/Navmain";
+import { NavFooter } from "./components/NavFooter";
 import { NavUpperbarre } from "./components/NavUpperbarre";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col h-[2394px] items-center justify-between pt-2.5 pb-0 px-0 relative bg-collection-1-white overflow-hidden">
       <NavUpperbarre />
       <NavMain />
       <LabelEvents />
       <Events />
+      <Sponsors />
+      <Questions />
+      <NavFooter />
     </div>
   );
 }

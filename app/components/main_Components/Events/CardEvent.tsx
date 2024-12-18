@@ -45,9 +45,9 @@ const CardEvent: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-row items-center justify-start text-[23.41px]">
-        <div className="rounded-[8.36px] bg-collection-1-secondary text-white flex flex-row items-center justify-center p-[8.4px]">
+        <button className="rounded-[8.36px] bg-collection-1-secondary text-white flex flex-row items-center justify-center p-[8.4px]">
           <div className="relative">S’inscrire</div>
-        </div>
+        </button>
       </div>
     </div>
   );
