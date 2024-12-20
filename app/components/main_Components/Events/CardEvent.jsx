@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import Image from "next/image";
 
-const CardEvent: NextPage = () => {
+const CardEvent = () => {
   return (
     <div className="w-[309.88px] relative shadow-[0px_2.440000057220459px_2.44px_rgba(0,_0,_0,_0.25)] rounded-[9.76px] bg-white h-[406.3px] flex flex-col items-center justify-between py-[24.4px] px-[7.3px] box-border text-center text-5xl-4 text-black font-inria-sans">
       <div className="self-stretch flex flex-col items-start justify-start text-[19.52px]">

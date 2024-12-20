@@ -1,18 +1,4 @@
-import React from "react";
-
-interface SpotTableSearchProps {
-  name: string;
-  selected: boolean;
-  setSelected: () => void;
-  side: boolean | null;
-}
-
-const SpotTableSearch = ({
-  name,
-  selected,
-  setSelected,
-  side,
-}: SpotTableSearchProps) => {
+const SpotTableSearch = ({ name, selected, setSelected, side }) => {
   return (
     <button
       className="flex flex-col h-full items-center justify-center flex-1"

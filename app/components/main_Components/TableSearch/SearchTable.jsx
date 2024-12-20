@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { searchTitles } from "./searchTableElements.json";
 import SpotTableSearch from "./SpotTableSearch";
 
-const SearchTable: React.FC = () => {
+const SearchTable = () => {
   const [selected, setSelected] = useState(0);
   return (
     <div className="flex flex-col h-64 items-start justify-center relative self-stretch w-full max-w-[757px] mr-[-139.00px] mw">

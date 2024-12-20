@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST(req) {
   const { text } = await req.json();
 
   const API_KEY_AUTOCOMPLETE_MAP = process.env.API_KEY_AUTOCOMPLETE_MAP || "";
@@ -13,8 +13,8 @@ export async function POST(req: Request) {
   };
   const res = await axios(cf);
   const data = res.data.features;
-  const response: { city: string; country: string }[] = [];
-  data.forEach((res: any) => {
+  const response= [];
+  data.forEach((res) => {
     const city = res.properties.city;
     const country = res.properties.country;
 

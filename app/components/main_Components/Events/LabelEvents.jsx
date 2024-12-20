@@ -1,6 +1,4 @@
-import type { NextPage } from "next";
-
-const LabelEvents: NextPage = () => {
+const LabelEvents = () => {
   return (
     <div className="w-full relative flex flex-col items-center justify-start text-left text-[32px] text-m3-black font-inter">
       <div className="flex flex-row items-center justify-center p-2.5">
