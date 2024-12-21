@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Université Al Akhawayn",
+    "specialite": [
+      "Business Administration",
+      "Computer Science",
+      "International Relations"
+    ],
+    "studentSatisfactionScore": 4.5,
+    "averageGraduateSalary": 8500,
+    "percentageInWorkOrFurtherStudy": 92,
+    "picture": "https://example.com/images/universite_al_akhawayn.jpg",
+    "address": {
+      "country": "Morocco",
+      "city": "Ifrane",
+      "address": "Bachir Chihani, Ifrane 53000"
+    }
+  },
+  {
+    "name": "École Nationale Supérieure d'Informatique et d'Analyse de Systèmes (ENSIAS)",
+    "specialite": [
+      "Computer Engineering",
+      "Data Science",
+      "Artificial Intelligence"
+    ],
+    "studentSatisfactionScore": 4.7,
+    "averageGraduateSalary": 9500,
+    "percentageInWorkOrFurtherStudy": 88,
+    "picture": "https://example.com/images/ensias.jpg",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Boulevard Mohamed V, Rabat 10000"
+    }
+  },
+  {
+    "name": "Institut National des Postes et Télécommunications (INPT)",
+    "specialite": [
+      "Telecommunications",
+      "Network Engineering",
+      "Cybersecurity"
+    ],
+    "studentSatisfactionScore": 4.3,
+    "averageGraduateSalary": 8000,
+    "percentageInWorkOrFurtherStudy": 85,
+    "picture": "https://example.com/images/inpt.jpg",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Avenue des Forces Armées Royales, Rabat 10000"
+    }
+  },
+  {
+    "name": "Université Hassan II de Casablanca",
+    "specialite": ["Law", "Medicine", "Engineering"],
+    "studentSatisfactionScore": 4.2,
+    "averageGraduateSalary": 7800,
+    "percentageInWorkOrFurtherStudy": 80,
+    "picture": "https://example.com/images/universite_hassan_ii.jpg",
+    "address": {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "address": "Route de Sidi Othmane, Casablanca 20000"
+    }
+  },
+  {
+    "name": "École Mohammadia d'Ingénieurs (EMI)",
+    "specialite": [
+      "Mechanical Engineering",
+      "Electrical Engineering",
+      "Civil Engineering"
+    ],
+    "studentSatisfactionScore": 4.6,
+    "averageGraduateSalary": 9000,
+    "percentageInWorkOrFurtherStudy": 90,
+    "picture": "https://example.com/images/emi.jpg",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Avenue Al Massira Al Khadra, Rabat 10000"
+    }
+  }
+]

@@ -3,8 +3,8 @@ import LabelEvents from "./components/main_Components/Events/LabelEvents";
 import { Questions } from "./components/main_Components/Qustions/Questions";
 import { Sponsors } from "./components/main_Components/Sponsors/Sponsors";
 import { NavMain } from "./components/main_Components/TableSearch/Navmain";
-import { NavFooter } from "./components/NavFooter";
-import { NavUpperbarre } from "./components/NavUpperbarre";
+import { NavFooter } from "./NavFooter";
+import { NavUpperbarre } from "./NavUpperbarre";
 
 export default function Home() {
   return (

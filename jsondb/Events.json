@@ -1,0 +1,37 @@
+[
+  {
+    "logo": "/logoEcoles/LogoEnsam.png",
+    "title": "Découvrir Oracle avec Ensam Casablanca",
+    "date": "2024-12-25T10:00:00",
+    "inscrit": 50,
+    "isPresential": "En ligne"
+  },
+  {
+    "logo": "/logoEcoles/m5PLogo.png",
+    "title": "Atelier Data Science avec l'Université Mohammed VI",
+    "date": "2024-12-30T14:00:00",
+    "inscrit": 150,
+    "isPresential": "Présentiel"
+  },
+  {
+    "logo": "/logoEcoles/univhassanLogo.png",
+    "title": "Séminaire sur l'intelligence artificielle avec l'Université Hassan II",
+    "date": "2025-01-05T09:30:00",
+    "inscrit": 120,
+    "isPresential": "En ligne"
+  },
+  {
+    "logo": "/LogoEnsam.png",
+    "title": "Conférence sur le cloud computing avec l'Université Al Akhawayn",
+    "date": "2025-01-10T11:00:00",
+    "inscrit": 80,
+    "isPresential": "Présentiel"
+  },
+  {
+    "logo": "/LogoEnsam.png",
+    "title": "Session sur la cybersécurité avec l'INPT Rabat",
+    "date": "2025-01-15T15:00:00",
+    "inscrit": 200,
+    "isPresential": "En ligne"
+  }
+]
