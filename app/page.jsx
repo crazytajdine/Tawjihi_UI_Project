@@ -8,7 +8,7 @@ import { NavUpperbarre } from "./NavUpperbarre";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-[2394px] items-center justify-between pt-2.5 pb-0 px-0 relative bg-collection-1-white overflow-hidden">
+    <div className="flex flex-col h-[2394px] items-center justify-between  pb-0 px-0 relative bg-collection-1-white overflow-hidden">
       <NavUpperbarre />
       <NavMain />
       <LabelEvents />

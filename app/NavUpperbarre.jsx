@@ -6,7 +6,7 @@ import Link from "next/link";
 export const NavUpperbarre = () => {
   return (
     <div
-      className={`flex h-[46px] items-center justify-between px-9 py-3.5 relative w-full `}
+      className={`flex h-[46px] mt-2.5 items-center justify-between px-9 py-3.5 relative w-full `}
     >
       <Link href={"/"} className="flex  relative w-[161.75px] ">
         <Image className=" w-7 h-[25px] " alt="Logo" src={logo3} />
