@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Filters = ({ count }) => {
+export const Filters = ({ count, register }) => {
   const getUniversityLabel = () => {
     switch (true) {
       case count === 0:
@@ -13,7 +13,6 @@ export const Filters = ({ count }) => {
         return "";
     }
   };
-  console.log(count);
 
   return (
     <div className="w-full relative flex flex-row items-center justify-between text-left text-[24.34px] text-black font-inria-sans">
