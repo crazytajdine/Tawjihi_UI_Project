@@ -1,147 +1,129 @@
-import React from "react";
 import Image from "next/image";
+import SpecialiteSlot from "./SpecialiteSlot";
 
-export const CardSchool = () => {
+export default function CardSchool({ school }) {
+  const {
+    name,
+    specialites,
+    studentSatisfactionScore,
+    averageGraduateSalary,
+    percentageInWorkOrFurtherStudy,
+    picture,
+    address,
+  } = school;
   return (
-    <div className="flex flex-col w-[1531px] items-start gap-[33px] px-[57px] py-9 relative bg-collection-1-main rounded-[71px]">
-      <div className="flex flex-col items-start gap-[5px] relative self-stretch w-full flex-[0_0_auto]">
-        <div className="relative self-stretch w-full flex-[0_0_auto]">
-          <div className="flex w-[458px] items-center justify-between absolute top-0 left-[480px]">
-            <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] bg-black rounded-[10px]">
-              <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-[color:var(--collection-1-TEXT)] text-2xl tracking-[0] leading-[Truepx]">
-                Informatique
-              </div>
-            </div>
-
-            <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] bg-black rounded-[10px]">
-              <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-[color:var(--collection-1-TEXT)] text-2xl tracking-[0] leading-[Truepx]">
-                mecanique
-              </div>
-            </div>
-
-            <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] bg-black rounded-[10px]">
-              <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-[color:var(--collection-1-TEXT)] text-2xl tracking-[0] leading-[Truepx]">
-                Electrique
-              </div>
+    <div className="w-full min-w-[800px] max-w-[1000px] rounded-[41.76px] bg-main flex flex-col items-start justify-start py-[21.2px] px-[33.5px] box-border gap-[19.4px] text-left text-[16.47px] text-black font-inria-sans">
+      {/* Header Section */}
+      <div className="self-stretch flex flex-col items-start justify-start gap-[3px] ">
+        {/* School Info and Specialties */}
+        <div className="self-stretch flex flex-row items-center justify-between">
+          {/* School Name and Location */}
+          <div className="flex flex-row items-center gap-4 w-1/3">
+            {/* School Name */}
+            <div className="flex flex-col">
+              <span className="font-bold">{name} </span>
+              {/* Location */}
+              <span className="text-sm text-black60">
+                {address.city} , {address.country}
+              </span>
             </div>
           </div>
 
-          <div className="flex w-[223px] items-center justify-center gap-2.5 absolute top-0 left-[1194px]">
-            <div className="relative flex-1 mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-collection-1-black60 text-[28px] tracking-[0] leading-[Truepx]">
-              view all cources &gt;
-            </div>
+          {/* Specialty Slots */}
+          <div className="flex flex-wrap gap-4 flex-1 justify-center text-white">
+            {specialites.map((specialite, index) => {
+              return <SpecialiteSlot key={index} specialite={specialite} />;
+            })}
           </div>
 
-          <div className="absolute w-[385px] h-[88px] top-0 left-0">
-            <p className="absolute w-[439px] -top-px left-0 [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-[28px] tracking-[0] leading-[Truepx]">
-              Ecole national superieur des <br />
-              arts et métiers
-            </p>
-          </div>
-        </div>
-
-        <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto]">
-          <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-collection-1-black60 text-2xl tracking-[0] leading-[Truepx]">
-            Sidi Othman,Casablanca
+          {/* View All Courses */}
+          <div className="flex items-center text-black60 justify-end  ">
+            <span className="cursor-pointer whitespace-nowrap hover:underline">
+              View all courses &gt;
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-7 px-0 py-1.5 relative self-stretch w-full flex-[0_0_auto]">
+      {/* Main Content Section */}
+      <div className="self-stretch flex flex-row items-center justify-center py-[3.5px] px-0 gap-[16.5px] text-[18.82px]">
+        {/* School Image */}
         <Image
-          width={413}
-          height={196}
-          className="relative w-[413px] h-[196px] object-cover"
-          alt="Element"
-          src={"/images/EnsamPic.png"}
+          className="w-[242.9px] relative rounded-[2.94px] h-[115.3px] object-cover"
+          width={243}
+          height={115}
+          alt="School Image"
+          src={picture}
         />
 
-        <div className="flex items-center gap-[41px] relative flex-1 grow">
-          <div className="inline-flex justify-center p-2.5 flex-[0_0_auto] items-center gap-2.5 relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-[32px] tracking-[0] leading-[Truepx]">
-              Student <br />
-              satisfaction
-              <br />
-              score
-            </div>
-          </div>
-
-          <div className="w-[67px] mr-[-24.67px] flex flex-col items-center justify-center gap-2.5 p-2.5 relative">
-            <div className="relative w-[115px] h-[97px] mt-[-1.00px] ml-[-34.00px] mr-[-34.00px] [font-family:'Inria_Sans-Bold',Helvetica] font-bold text-black text-[40px] text-center tracking-[0] leading-[Truepx]">
-              80%
+        {/* Statistics */}
+        <div className="flex-1 flex flex-row  justify-start gap-[24.1px]">
+          {/* Student Satisfaction */}
+          <div className="flex flex-col ">
+            <div className="relative">Student satisfaction score</div>
+            <div className="mt-2">
+              <b className="text-[23.53px]">{studentSatisfactionScore}</b>
             </div>
           </div>
         </div>
 
-        <div className="flex w-[34px] items-center justify-center gap-2.5 relative">
-          <img className="relative w-0.5 h-[249px]" alt="Line" src={null} />
+        {/* Divider */}
+        <div className="w-5 flex flex-row items-center justify-center">
+          <div className="w-[1.2px] border-black border-r-[1.2px] border-dashed h-[147.6px]" />
         </div>
 
-        <div className="flex items-center gap-[41px] relative flex-1 grow">
-          <div className="inline-flex justify-center p-2.5 flex-[0_0_auto] items-center gap-2.5 relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-[32px] tracking-[0] leading-[Truepx]">
-              Average <br />
-              graduate
-              <br />
-              salary
-            </div>
-          </div>
-
-          <div className="w-[67px] flex flex-col items-center justify-center gap-2.5 p-2.5 relative">
-            <div className="relative w-[133px] mt-[-1.00px] ml-[-43.00px] mr-[-43.00px] [font-family:'Inria_Sans-Bold',Helvetica] font-bold text-black text-[32px] text-center tracking-[0] leading-[Truepx]">
-              10K Dh
-              <br />
-              High
+        {/* Average Graduate Salary */}
+        <div className="flex-1 flex flex-row  justify-start gap-[24.1px]">
+          <div className="flex flex-col ">
+            <div className="relative">Average graduate salary</div>
+            <div className="mt-2 text-[23.53px]">
+              <b>{averageGraduateSalary} dh</b>
             </div>
           </div>
         </div>
 
-        <div className="flex w-[34px] items-center justify-center gap-2.5 relative">
-          <img className="relative w-0.5 h-[249px]" alt="Line" src={null} />
+        {/* Divider */}
+        <div className="w-5 flex flex-row items-center justify-center">
+          <div className="w-[1.2px] border-black border-r-[1.2px] border-dashed h-[147.6px]" />
         </div>
 
-        <div className="flex items-center gap-[41px] relative flex-1 self-stretch grow">
-          <div className="flex flex-1 grow items-center gap-2.5 relative">
-            <p className="relative self-stretch w-[177px] mt-[-1.00px] mr-[-64.83px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-[32px] tracking-[0] leading-[Truepx]">
-              % of graduates <br />
-              in work or <br />
-              further study
-            </p>
-          </div>
-
-          <div className="h-[117px] flex-1 grow flex flex-col items-center justify-center gap-2.5 p-2.5 relative">
-            <div className="relative flex-1 self-stretch mt-[-1.00px] [font-family:'Inria_Sans-Bold',Helvetica] font-bold text-black text-[40px] text-center tracking-[0] leading-[Truepx]">
-              95%
+        {/* % of Graduates in Work or Further Study */}
+        <div className="flex-1 flex flex-row  justify-start gap-[24.1px]">
+          <div className="flex flex-col ">
+            <div className="relative">
+              % of graduates in work or further study
+            </div>
+            <div className="mt-2">
+              <b className="text-[23.53px]">
+                {percentageInWorkOrFurtherStudy}%
+              </b>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex w-[1450px] items-center justify-center gap-10 px-[39px] py-0 relative flex-[0_0_auto] mr-[-33.00px]">
-        <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] bg-black rounded-[10px]">
-          <div className="relative w-fit mt-[-1.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-[color:var(--collection-1-TEXT)] text-2xl tracking-[0] leading-[Truepx]">
-            Open days
-          </div>
-        </div>
+      {/* Action Buttons */}
+      <div className="w-full flex flex-wrap items-center justify-center py-0 px-[22.9px] box-border gap-[23.5px] text-[14.12px]">
+        {/* Open Days Button */}
+        <button className="rounded-[5.88px] bg-black flex items-center justify-center p-[5.9px] text-white">
+          Open days
+        </button>
 
-        <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] rounded-[10px] border-[3px] border-solid border-black">
-          <div className="relative w-fit mt-[-3.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-2xl tracking-[0] leading-[Truepx]">
-            get prospectus
-          </div>
-        </div>
+        {/* Get Prospectus Button */}
+        <button className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]">
+          Get prospectus
+        </button>
 
-        <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] rounded-[10px] border-[3px] border-solid border-black">
-          <div className="relative w-fit mt-[-3.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-2xl tracking-[0] leading-[Truepx]">
-            Request info
-          </div>
-        </div>
+        {/* Request Info Button */}
+        <button className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]">
+          Request info
+        </button>
 
-        <div className="inline-flex items-center justify-center gap-2.5 p-2.5 relative flex-[0_0_auto] rounded-[10px] border-[3px] border-solid border-black">
-          <div className="relative w-fit mt-[-3.00px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-2xl tracking-[0] leading-[Truepx]">
-            visit website
-          </div>
-        </div>
+        {/* Visit Website Button */}
+        <button className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]">
+          Visit website
+        </button>
       </div>
     </div>
   );
-};
+}

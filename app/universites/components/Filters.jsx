@@ -16,18 +16,13 @@ export const Filters = ({ count }) => {
   console.log(count);
 
   return (
-    <div className="flex items-center justify-between relative">
-      <div className="inline-flex items-center justify-center gap-[6.76px] p-[6.76px] relative flex-[0_0_auto]">
-        <div className="relative w-fit mt-[-0.68px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-black text-[24.3px] tracking-[0] leading-[Truepx] whitespace-nowrap">
-          {getUniversityLabel()}
-        </div>
+    <div className="w-full relative flex flex-row items-center justify-between text-left text-[24.34px] text-black font-inria-sans">
+      <div className="flex flex-row items-center justify-center p-[6.8px]">
+        <div className="relative"> {getUniversityLabel()}</div>
       </div>
-
-      <div className="bg-[#efefef] rounded-[6.76px] inline-flex items-center justify-center gap-[6.76px] p-[6.76px] relative flex-[0_0_auto]">
-        <div className="relative w-fit mt-[-0.68px] [font-family:'Inria_Sans-Bold',Helvetica] font-bold text-black text-[24.3px] tracking-[0] leading-[Truepx] whitespace-nowrap">
-          more filters
-        </div>
-      </div>
+      <button className="rounded-[6.76px] bg-whitesmoke flex flex-row items-center justify-center p-[6.8px]">
+        more filters
+      </button>
     </div>
   );
 };
