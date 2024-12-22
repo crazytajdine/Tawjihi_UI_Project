@@ -1,7 +1,7 @@
 [
   {
     "name": "Université Al Akhawayn",
-    "specialites": [
+    "specialties": [
       "Business Administration",
       "Computer Science",
       "International Relations"
@@ -9,7 +9,9 @@
     "studentSatisfactionScore": 4.5,
     "averageGraduateSalary": 8500,
     "percentageInWorkOrFurtherStudy": 92,
-    "picture": "/images/EnsamPic.png",
+    "email": "contact@alakhawayn.edu.ma",
+    "website": "https://aui.ma",
+    "picture": "https://i.ytimg.com/vi/mgfCVqLI7Mg/maxresdefault.jpg",
     "address": {
       "country": "Morocco",
       "city": "Ifrane",
@@ -18,24 +20,32 @@
   },
   {
     "name": "École Nationale Supérieure d'Informatique et d'Analyse de Systèmes (ENSIAS)",
-    "specialites": [
-      "Computer Engineering",
-      "Data Science",
-      "Artificial Intelligence"
+    "specialties": [
+      "Business Intelligence & Analytics",
+      "Data Engineering",
+      "Software Engineering",
+      "Data Science and IoT Engineering",
+      "Digital Engineering for Finance",
+      "Artificial Intelligence Engineering",
+      "Information Systems Security",
+      "Smart Supply Chain & Logistics",
+      "Smart System Engineering"
     ],
     "studentSatisfactionScore": 4.7,
     "averageGraduateSalary": 9500,
     "percentageInWorkOrFurtherStudy": 88,
-    "picture": "/images/EnsamPic.png",
+    "email": "info@ensias.ma",
+    "website": "https://ensias.um5.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7W8vh2C3Us6Dho_7DsiSrPV1uPFjPLrR6yw&s",
     "address": {
       "country": "Morocco",
       "city": "Rabat",
-      "address": "Boulevard Mohamed V, Rabat 10000"
+      "address": "Avenue Mohammed Ben Abdellah Regragui, Madinat Al Irfane, Rabat 10000"
     }
   },
   {
     "name": "Institut National des Postes et Télécommunications (INPT)",
-    "specialites": [
+    "specialties": [
       "Telecommunications",
       "Network Engineering",
       "Cybersecurity"
@@ -43,20 +53,24 @@
     "studentSatisfactionScore": 4.3,
     "averageGraduateSalary": 8000,
     "percentageInWorkOrFurtherStudy": 85,
-    "picture": "/images/EnsamPic.png",
+    "email": "contact@inpt.ma",
+    "website": "https://www.inpt.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ23kGbiILQT84FRKChKfA6xl_LXjdd2yINag&s",
     "address": {
       "country": "Morocco",
       "city": "Rabat",
-      "address": "Avenue des Forces Armées Royales, Rabat 10000"
+      "address": "Avenue Allal El Fassi, Madinat Al Irfane, Rabat 10000"
     }
   },
   {
     "name": "Université Hassan II de Casablanca",
-    "specialites": ["Law", "Medicine", "Engineering"],
+    "specialties": ["Law", "Medicine", "Engineering"],
     "studentSatisfactionScore": 4.2,
     "averageGraduateSalary": 7800,
     "percentageInWorkOrFurtherStudy": 80,
-    "picture": "/images/EnsamPic.png",
+    "email": "info@uh2c.ma",
+    "website": "https://www.univh2c.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyCa0iYk5kmK0Vt0f_2x9AK-p4F3IRyFinVw&s",
     "address": {
       "country": "Morocco",
       "city": "Casablanca",
@@ -65,7 +79,7 @@
   },
   {
     "name": "École Mohammadia d'Ingénieurs (EMI)",
-    "specialites": [
+    "specialties": [
       "Mechanical Engineering",
       "Electrical Engineering",
       "Civil Engineering"
@@ -73,11 +87,136 @@
     "studentSatisfactionScore": 4.6,
     "averageGraduateSalary": 9000,
     "percentageInWorkOrFurtherStudy": 90,
-    "picture": "/images/EnsamPic.png",
+    "email": "contact@emi.ac.ma",
+    "website": "https://www.emi.ac.ma",
+    "picture": "https://f2.hespress.com/wp-content/uploads/2022/03/mohammadia-des-ingenieurs1.jpg",
     "address": {
       "country": "Morocco",
       "city": "Rabat",
-      "address": "Avenue Al Massira Al Khadra, Rabat 10000"
+      "address": "Avenue Ibn Sina, Agdal, Rabat 10000"
+    }
+  },
+  {
+    "name": "École Nationale Supérieure des Arts et Métiers (ENSAM) Casablanca",
+    "specialties": [
+      "Mechanical Engineering",
+      "Industrial Engineering",
+      "Mechatronics",
+      "Electrical Engineering",
+      "Computer Engineering"
+    ],
+    "studentSatisfactionScore": 4.5,
+    "averageGraduateSalary": 8500,
+    "percentageInWorkOrFurtherStudy": 88,
+    "email": "contact@ensam-casa.ma",
+    "website": "https://ensam-casa.ma",
+    "picture": "/images/EnsamPic.png",
+    "address": {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "address": "50 Avenue Nile Sidi Othman, Casablanca 20670"
+    }
+  },
+  {
+    "name": "Université Internationale de Rabat (UIR)",
+    "specialties": [
+      "Aerospace Engineering",
+      "Renewable Energy",
+      "Architecture",
+      "Computer Science",
+      "Business Administration"
+    ],
+    "studentSatisfactionScore": 4.8,
+    "averageGraduateSalary": 10000,
+    "percentageInWorkOrFurtherStudy": 95,
+    "email": "contact@uir.ac.ma",
+    "website": "https://www.uir.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQIiwlJQ5uy3brGe4ZdhhN5l7kMdjKkYI0eQ&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Technopolis Rabat-Shore, Sala Al Jadida 11100"
+    }
+  },
+  {
+    "name": "École Hassania des Travaux Publics (EHTP)",
+    "specialties": [
+      "Civil Engineering",
+      "Hydraulics",
+      "Urban Planning",
+      "Electrical Engineering",
+      "Computer Science"
+    ],
+    "studentSatisfactionScore": 4.6,
+    "averageGraduateSalary": 9000,
+    "percentageInWorkOrFurtherStudy": 89,
+    "email": "info@ehtp.ac.ma",
+    "website": "http://www.ehtp.ac.ma/",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiMa6g5lythEVCZwNoAgN_jbGq8MPg3iDxcg&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "address": "Km 7, Route d'El Jadida, Casablanca 20000"
+    }
+  },
+  {
+    "name": "Université Cadi Ayyad",
+    "specialties": ["Applied Sciences", "Humanities", "Social Sciences"],
+    "studentSatisfactionScore": 4.1,
+    "averageGraduateSalary": 7500,
+    "percentageInWorkOrFurtherStudy": 82,
+    "email": "contact@uca.ma",
+    "website": "http://www.uca.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSeLJJtA6lVbIxLax69zlOm4BYsGb88wqO2g&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Marrakech",
+      "address": "Boulevard Abdelkrim El Khattabi, Marrakech 40000"
+    }
+  },
+  {
+    "name": "Université Mohammed V de Rabat",
+    "specialties": ["Law", "Economics", "Sciences", "Humanities"],
+    "studentSatisfactionScore": 4.4,
+    "averageGraduateSalary": 8200,
+    "percentageInWorkOrFurtherStudy": 87,
+    "email": "contact@um5.ac.ma",
+    "website": "https://www.um5.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3HYQW1floXVQPMwIan-FEbsZduvaseHe0A&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Avenue des Nations Unies, Rabat 10000"
+    }
+  },
+  {
+    "name": "Université Ibn Tofail",
+    "specialties": ["Science and Technology", "Economics", "Literature"],
+    "studentSatisfactionScore": 4.0,
+    "averageGraduateSalary": 7300,
+    "percentageInWorkOrFurtherStudy": 78,
+    "email": "contact@uit.ac.ma",
+    "website": "http://www.uit.ac.ma",
+    "picture": "https://www.uit.ac.ma/wp-content/uploads/2023/06/FEG-homepage-1.webp",
+    "address": {
+      "country": "Morocco",
+      "city": "Kénitra",
+      "address": "BP 242, Kénitra 14000"
+    }
+  },
+  {
+    "name": "Université Abdelmalek Essaâdi",
+    "specialties": ["Science", "Engineering", "Law", "Economics"],
+    "studentSatisfactionScore": 4.3,
+    "averageGraduateSalary": 7900,
+    "percentageInWorkOrFurtherStudy": 84,
+    "email": "contact@uae.ma",
+    "website": "https://www.uae.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHmGZuysCPQnWYbxnr2Un0k8YFLJZHnT59zg&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Tétouan",
+      "address": "Mhannech II, Tétouan 93000"
     }
   }
 ]

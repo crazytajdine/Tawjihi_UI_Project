@@ -18,7 +18,6 @@ export default function University() {
   const closePopup = () => setschoolname("");
 
   const onSubmit = (data) => {
-    console.log(data);
     const config = {
       method: "get",
       url: "/api/School?name=" + data.name,

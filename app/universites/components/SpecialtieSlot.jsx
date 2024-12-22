@@ -1,11 +1,11 @@
 import React from "react";
 
-const SpecialiteSlot = ({ specialite }) => {
+const SpecialtieSlot = ({ specialtie }) => {
   return (
     <div className="rounded-[5.88px] bg-black flex flex-row items-center justify-center p-[6px]">
-      <div className="relative">{specialite}</div>
+      <div className="relative">{specialtie}</div>
     </div>
   );
 };
 
-export default SpecialiteSlot;
+export default SpecialtieSlot;

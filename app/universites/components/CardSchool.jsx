@@ -1,10 +1,13 @@
+// components/CardSchool.tsx
+
 import Image from "next/image";
-import SpecialiteSlot from "./SpecialiteSlot";
+import SpecialtieSlot from "./SpecialtieSlot";
+import { useState } from "react";
 
 export default function CardSchool({ school, openPopup }) {
   const {
     name,
-    specialites,
+    specialties,
     studentSatisfactionScore,
     averageGraduateSalary,
     percentageInWorkOrFurtherStudy,
@@ -12,33 +15,53 @@ export default function CardSchool({ school, openPopup }) {
     address,
   } = school;
 
+  const [showAllSpecialties, setShowAllSpecialties] = useState(false);
+  const maxVisible = 3; // Number of specialties to show initially
+
+  const visibleSpecialties = showAllSpecialties
+    ? specialties
+    : specialties.slice(0, maxVisible);
+  const remainingCount = specialties.length - maxVisible;
+
+  const handleToggleSpecialties = () => {
+    setShowAllSpecialties((prev) => !prev);
+  };
+
   return (
     <div className="w-full min-w-[800px] max-w-[1000px] rounded-[41.76px] bg-main flex flex-col items-start justify-start py-[21.2px] px-[33.5px] box-border gap-[19.4px] text-left text-[16.47px] text-black font-inria-sans">
       {/* Header Section */}
-      <div className="self-stretch flex flex-col items-start justify-start gap-[3px] ">
+      <div className="self-stretch flex flex-col items-start justify-start gap-[3px]">
         {/* School Info and Specialties */}
         <div className="self-stretch flex flex-row items-center justify-between">
           {/* School Name and Location */}
           <div className="flex flex-row items-center gap-4 w-1/3">
             {/* School Name */}
             <div className="flex flex-col">
-              <span className="font-bold">{name} </span>
+              <span className="font-bold">{name}</span>
               {/* Location */}
               <span className="text-sm text-black60">
-                {address.city} , {address.country}
+                {address.city}, {address.country}
               </span>
             </div>
           </div>
 
           {/* Specialty Slots */}
-          <div className="flex flex-wrap gap-4 flex-1 justify-center text-white">
-            {specialites.map((specialite, index) => {
-              return <SpecialiteSlot key={index} specialite={specialite} />;
-            })}
+          <div className="flex flex-wrap gap-2 flex-1 justify-center text-white">
+            {visibleSpecialties.map((specialtie, index) => (
+              <SpecialtieSlot key={index} specialtie={specialtie} />
+            ))}
+            {remainingCount > 0 && !showAllSpecialties && (
+              <button
+                onClick={handleToggleSpecialties}
+                className="text-blue-500 hover:underline"
+              >
+                +{remainingCount} more
+              </button>
+            )}
           </div>
 
           {/* View All Courses */}
-          <div className="flex items-center text-black60 justify-end  ">
+          <div className="flex items-center text-black60 justify-end">
             <span className="cursor-pointer whitespace-nowrap hover:underline">
               View all courses &gt;
             </span>
@@ -58,9 +81,9 @@ export default function CardSchool({ school, openPopup }) {
         />
 
         {/* Statistics */}
-        <div className="flex-1 flex flex-row  justify-start gap-[24.1px]">
+        <div className="flex-1 flex flex-row justify-start gap-[24.1px]">
           {/* Student Satisfaction */}
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <div className="relative">Student satisfaction score</div>
             <div className="mt-2">
               <b className="text-[23.53px]">{studentSatisfactionScore}</b>
@@ -74,8 +97,8 @@ export default function CardSchool({ school, openPopup }) {
         </div>
 
         {/* Average Graduate Salary */}
-        <div className="flex-1 flex flex-row  justify-start gap-[24.1px]">
-          <div className="flex flex-col ">
+        <div className="flex-1 flex flex-row justify-start gap-[24.1px]">
+          <div className="flex flex-col">
             <div className="relative">Average graduate salary</div>
             <div className="mt-2 text-[23.53px]">
               <b>{averageGraduateSalary} dh</b>
@@ -89,8 +112,8 @@ export default function CardSchool({ school, openPopup }) {
         </div>
 
         {/* % of Graduates in Work or Further Study */}
-        <div className="flex-1 flex flex-row  justify-start gap-[24.1px]">
-          <div className="flex flex-col ">
+        <div className="flex-1 flex flex-row justify-start gap-[24.1px]">
+          <div className="flex flex-col">
             <div className="relative">
               % of graduates in work or further study
             </div>
@@ -106,7 +129,12 @@ export default function CardSchool({ school, openPopup }) {
       {/* Action Buttons */}
       <div className="w-full flex flex-wrap items-center justify-center py-0 px-[22.9px] box-border gap-[23.5px] text-[14.12px]">
         {/* Open Days Button */}
-        <button className="rounded-[5.88px] bg-black flex items-center justify-center p-[5.9px] text-white">
+        <button
+          onClick={() => {
+            window.open(school.website, "_blank");
+          }}
+          className="rounded-[5.88px] bg-black flex items-center justify-center p-[5.9px] text-white"
+        >
           Open days
         </button>
 
@@ -119,12 +147,22 @@ export default function CardSchool({ school, openPopup }) {
         </button>
 
         {/* Request Info Button */}
-        <button className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]">
+        <button
+          onClick={() => {
+            window.open("mailto:" + school.email, "_blank");
+          }}
+          className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]"
+        >
           Request info
         </button>
 
         {/* Visit Website Button */}
-        <button className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]">
+        <button
+          onClick={() => {
+            window.open(school.website, "_blank");
+          }}
+          className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]"
+        >
           Visit website
         </button>
       </div>
