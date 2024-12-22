@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SpecialiteSlot from "./SpecialiteSlot";
 
-export default function CardSchool({ school }) {
+export default function CardSchool({ school, openPopup }) {
   const {
     name,
     specialites,
@@ -11,6 +11,7 @@ export default function CardSchool({ school }) {
     picture,
     address,
   } = school;
+
   return (
     <div className="w-full min-w-[800px] max-w-[1000px] rounded-[41.76px] bg-main flex flex-col items-start justify-start py-[21.2px] px-[33.5px] box-border gap-[19.4px] text-left text-[16.47px] text-black font-inria-sans">
       {/* Header Section */}
@@ -110,7 +111,10 @@ export default function CardSchool({ school }) {
         </button>
 
         {/* Get Prospectus Button */}
-        <button className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]">
+        <button
+          onClick={openPopup}
+          className="rounded-[5.88px] border-black border-[1.8px] border-solid flex items-center justify-center p-[5.9px]"
+        >
           Get prospectus
         </button>
 

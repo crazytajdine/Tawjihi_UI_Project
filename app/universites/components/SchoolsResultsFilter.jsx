@@ -5,7 +5,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import Filters from "./Filters"; // Ensure correct import path
 import CardSchool from "./CardSchool"; // Ensure correct import path
 
-const SchoolsResultsFilter = ({ schools }) => {
+const SchoolsResultsFilter = ({ schools, openPopup }) => {
   // State to hold the filtered schools
   const [filteredSchools, setFilteredSchools] = useState(schools);
 
@@ -156,7 +156,11 @@ const SchoolsResultsFilter = ({ schools }) => {
       />
       <div className="self-stretch gap-10 flex flex-row items-start justify-center flex-wrap content-start text-[16.5px]">
         {filteredSchools.map((school) => (
-          <CardSchool key={school.id + school.name} school={school} />
+          <CardSchool
+            key={school.id + school.name}
+            openPopup={() => openPopup(school.name)}
+            school={school}
+          />
         ))}
       </div>
       {filteredSchools.length === 0 && (

@@ -69,7 +69,7 @@ export const NavFooter = () => {
         </Link>
 
         <Link
-          href={"/support"}
+          href={"/contact"}
           className="relative self-stretch [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-collection-1-white text-[22.5px] tracking-[0] leading-[normal]"
         >
           Support

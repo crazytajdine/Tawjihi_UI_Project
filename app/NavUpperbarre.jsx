@@ -32,7 +32,7 @@ export const NavUpperbarre = () => {
         </Link>
 
         <Link
-          href={"/Calender"}
+          href={"/calendar"}
           className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
           Calendrier

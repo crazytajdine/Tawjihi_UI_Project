@@ -6,10 +6,16 @@ import SchoolsResultsFilter from "./components/SchoolsResultsFilter";
 import SearchBar from "./components/SearchBar";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import GetProspectusPopup from "./components/GetProspectusPopup";
 
 export default function University() {
   const { register, handleSubmit } = useForm();
   const [schools, setSchools] = useState([]);
+
+  const [schoolname, setschoolname] = useState("");
+
+  const openPopup = (schoolname) => setschoolname(schoolname);
+  const closePopup = () => setschoolname("");
 
   const onSubmit = (data) => {
     console.log(data);
@@ -35,8 +41,16 @@ export default function University() {
         className="flex flex-col w-full items-center gap-[86px] relative bg-[color:var(--collection-1-TEXT)]"
       >
         <SearchBar register={register} />
-        <SchoolsResultsFilter schools={schools} register={register} />
+        <SchoolsResultsFilter
+          openPopup={openPopup}
+          schools={schools}
+          register={register}
+        />
       </form>
+      {schoolname != "" && (
+        <GetProspectusPopup schoolname={schoolname} onClose={closePopup} />
+      )}
+
       <NavFooter />
     </div>
   );
