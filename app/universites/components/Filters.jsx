@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Filters = ({ count, register }) => {
+export const Filters = ({ count }) => {
   const getUniversityLabel = () => {
     switch (true) {
       case count === 0:
