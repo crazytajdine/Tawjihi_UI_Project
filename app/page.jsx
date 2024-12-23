@@ -1,7 +1,7 @@
 import Events from "./components/main_Components/Events/Events";
 import LabelEvents from "./components/main_Components/Events/LabelEvents";
 import { Questions } from "./components/main_Components/Qustions/Questions";
-import { Sponsors } from "./components/main_Components/Sponsors/sponsors";
+import { Sponsors } from "./components/main_Components/Sponsors/Sponsors";
 import { NavMain } from "./components/main_Components/TableSearch/Navmain";
 import { NavFooter } from "./NavFooter";
 import { NavUpperbarre } from "./NavUpperbarre";

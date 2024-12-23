@@ -1,3 +1,20 @@
-{
-  "searchTitles": ["Universités", "Spécialités", "Bourses"]
-}
+[
+  {
+    "name": "Universités",
+    "title": "University name",
+    "placeholder": "search for universities",
+    "url": "/universities"
+  },
+  {
+    "name": "Spécialités",
+    "title": "Specialty name",
+    "placeholder": "search for specialties",
+    "url": "/Specialties"
+  },
+  {
+    "name": "events",
+    "title": "Event name",
+    "placeholder": "search for events",
+    "url": "/Events"
+  }
+]
