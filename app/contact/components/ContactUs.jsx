@@ -44,7 +44,7 @@ const ContactUs = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 w-full"
+            className="bg-collection-1-main text-black p-2 rounded  w-full"
           >
             Envoyer
           </button>

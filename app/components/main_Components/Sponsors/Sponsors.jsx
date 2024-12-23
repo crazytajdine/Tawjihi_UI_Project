@@ -1,13 +1,7 @@
 import React from "react";
 import Image from "next/image";
-
+import sponsors from "./sponsors.json";
 export const Sponsors = () => {
-  const sponsors = [
-    { src: "/LogoEnsam.png", name: "Ensam" },
-    { src: "/LogoEnsam.png", name: "Ensam" },
-    { src: "/LogoEnsam.png", name: "Ensam" },
-    { src: "/LogoEnsam.png", name: "Ensam" },
-  ];
   return (
     <div className="flex flex-col items-center gap-4 px-0 py-[25px] relative">
       <div className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]">

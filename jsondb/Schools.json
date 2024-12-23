@@ -218,5 +218,127 @@
       "city": "Tétouan",
       "address": "Mhannech II, Tétouan 93000"
     }
+  },
+  {
+    "name": "Institut Agronomique et Vétérinaire Hassan II (IAV)",
+    "specialties": [
+      "Agronomy",
+      "Veterinary Medicine",
+      "Environmental Engineering",
+      "Food Technology"
+    ],
+    "studentSatisfactionScore": 4.7,
+    "averageGraduateSalary": 8800,
+    "percentageInWorkOrFurtherStudy": 91,
+    "email": "contact@iav.ac.ma",
+    "website": "https://www.iav.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj2tEhyUAS1hqzmv7KAvuP0ylRut_8CEz3VA&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Avenue Mohamed Ben Abdallah Regragui, Rabat 10000"
+    }
+  },
+  {
+    "name": "Université Internationale Abulcasis des Sciences de la Santé (UIASS)",
+    "specialties": [
+      "Medicine",
+      "Pharmacy",
+      "Nursing",
+      "Biomedical Engineering"
+    ],
+    "studentSatisfactionScore": 4.6,
+    "averageGraduateSalary": 9500,
+    "percentageInWorkOrFurtherStudy": 94,
+    "email": "contact@uiass.ma",
+    "website": "https://www.uiass.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Bxy2s8D1OtbWN9P3y1scC_ivKjaA51RE4g&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Technopole Bouregreg, Rabat 10000"
+    }
+  },
+  {
+    "name": "École Supérieure des Industries du Textile et de l’Habillement (ESITH)",
+    "specialties": [
+      "Textile Engineering",
+      "Fashion Design",
+      "Industrial Management",
+      "Supply Chain Management"
+    ],
+    "studentSatisfactionScore": 4.4,
+    "averageGraduateSalary": 8500,
+    "percentageInWorkOrFurtherStudy": 89,
+    "email": "info@esith.ac.ma",
+    "website": "https://www.esith.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2YRJMfaR9qa24J_bFzI3W13Wrc1L4AMNUcg&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "address": "Route d'El Jadida, Casablanca 20000"
+    }
+  },
+  {
+    "name": "HEM Business School Casablanca",
+    "specialties": [
+      "Business Management",
+      "Finance",
+      "Marketing",
+      "Human Resources"
+    ],
+    "studentSatisfactionScore": 4.8,
+    "averageGraduateSalary": 9800,
+    "percentageInWorkOrFurtherStudy": 93,
+    "email": "contact@hem.ac.ma",
+    "website": "https://www.hem.ac.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpoHWS0pUhZP2NI2yUqVLYfSX5rkC4ancgmQ&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "address": "Km 4.200 Route de Nouaceur, Casablanca 20000"
+    }
+  },
+  {
+    "name": "École Centrale Casablanca",
+    "specialties": [
+      "Mechanical Engineering",
+      "Electrical Engineering",
+      "Computer Science",
+      "Industrial Engineering"
+    ],
+    "studentSatisfactionScore": 4.9,
+    "averageGraduateSalary": 11000,
+    "percentageInWorkOrFurtherStudy": 96,
+    "email": "info@centrale-casablanca.ma",
+    "website": "https://www.centrale-casablanca.ma",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHukc5bhj7sKkhLGhPoC3_cbAp8FVn_PHLsg&s",
+    "address": {
+      "country": "Morocco",
+      "city": "Casablanca",
+      "address": "Bouskoura Green City, Casablanca 20100"
+    }
+  },
+
+  {
+    "name": "École Nationale Supérieure des Arts et Métiers (ENSAM) Rabat",
+    "specialties": [
+      "Mechanical Engineering",
+      "Industrial Engineering",
+      "Mechatronics",
+      "Electrical Engineering",
+      "Computer Engineering"
+    ],
+    "studentSatisfactionScore": 4.5,
+    "averageGraduateSalary": 8600,
+    "percentageInWorkOrFurtherStudy": 87,
+    "email": "contact@ensamrabat.ac.ma",
+    "website": "https://ensam.um5.ac.ma",
+    "picture": "https://orientation-chabab.com/images/ensam-rabat-concours2020.png",
+    "address": {
+      "country": "Morocco",
+      "city": "Rabat",
+      "address": "Avenue de la Victoire, Rabat 10000"
+    }
   }
 ]
