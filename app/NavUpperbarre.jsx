@@ -18,7 +18,7 @@ export const NavUpperbarre = () => {
 
       <div className="flex w-[407.81px] items-center gap-[27px]  relative ">
         <Link
-          href={"/universites"}
+          href={"/universities"}
           className="relative   [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
           Universités
@@ -39,10 +39,10 @@ export const NavUpperbarre = () => {
         </Link>
 
         <Link
-          href={"/conseils"}
+          href={"/events"}
           className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
-          Conseils
+          Events
         </Link>
       </div>
 

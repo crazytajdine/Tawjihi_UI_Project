@@ -6,12 +6,17 @@ import SpotTableSearch from "./SpotTableSearch";
 
 const SearchTable = () => {
   const [selected, setSelected] = useState(0);
+  const [searchTerm, setSearchTerm] = useState(""); // State to hold the input value
 
   const handleSearch = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const selectedSearch = searchTitles[selected];
     if (selectedSearch?.url) {
-      window.location.href = selectedSearch.url;
+      // Redirect to the URL with the search term as a query parameter
+      const searchUrl = `${selectedSearch.url}?name=${encodeURIComponent(
+        searchTerm
+      )}`;
+      window.location.href = searchUrl;
     }
   };
 
@@ -52,6 +57,8 @@ const SearchTable = () => {
           <input
             id="universitySearchName"
             placeholder={searchTitles[selected].placeholder}
+            value={searchTerm} // Bind input value to state
+            onChange={(e) => setSearchTerm(e.target.value)} // Update state on change
             className="flex h-[57px] items-center gap-2.5 p-2.5 relative flex-1 grow bg-collection-1-white rounded-xl border border-solid border-collection-1-black60"
           ></input>
 

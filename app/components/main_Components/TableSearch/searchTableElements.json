@@ -9,12 +9,12 @@
     "name": "Spécialités",
     "title": "Specialty name",
     "placeholder": "search for specialties",
-    "url": "/Specialties"
+    "url": "/specialties"
   },
   {
-    "name": "events",
+    "name": "Events",
     "title": "Event name",
     "placeholder": "search for events",
-    "url": "/Events"
+    "url": "/events"
   }
 ]
