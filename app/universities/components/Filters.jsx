@@ -8,9 +8,9 @@ import { debounce } from "lodash"; // Import debounce from lodash
 
 const Filters = ({
   count,
-  uniqueSpecialites,
-  selectedSpecialites,
-  setSelectedSpecialites,
+  uniqueSpecialties,
+  selectedSpecialties,
+  setSelectedSpecialties,
   selectedLocations,
   setSelectedLocations,
   ratingMin,
@@ -80,7 +80,7 @@ const Filters = ({
     const value = e.target.value;
     setSpecialityInput(value);
     if (value.length > 0) {
-      const filtered = uniqueSpecialites.filter((spec) =>
+      const filtered = uniqueSpecialties.filter((spec) =>
         spec.toLowerCase().includes(value.toLowerCase())
       );
       setSpecialitySuggestions(filtered);
@@ -93,8 +93,8 @@ const Filters = ({
 
   // Handle suggestion click for Speciality
   const handleSpecialitySuggestionClick = (spec) => {
-    if (!selectedSpecialites.includes(spec)) {
-      setSelectedSpecialites([...selectedSpecialites, spec]);
+    if (!selectedSpecialties.includes(spec)) {
+      setSelectedSpecialties([...selectedSpecialties, spec]);
     }
     setSpecialityInput("");
     setSpecialitySuggestions([]);
@@ -103,7 +103,7 @@ const Filters = ({
 
   // Handle removal of selected speciality
   const handleRemoveSpeciality = (spec) => {
-    setSelectedSpecialites(selectedSpecialites.filter((s) => s !== spec));
+    setSelectedSpecialties(selectedSpecialties.filter((s) => s !== spec));
   };
 
   // Handle input change for Location with debounced API call
@@ -136,7 +136,7 @@ const Filters = ({
 
   // Reset all filters
   const resetFilters = () => {
-    setSelectedSpecialites([]);
+    setSelectedSpecialties([]);
     setSelectedLocations([]);
     setLocationInput("");
     setRatingMin("");
@@ -195,7 +195,7 @@ const Filters = ({
         {/* Buttons */}
         <div className="flex flex-row items-center space-x-4">
           {/* "Reset Filters" Button with Gradient Transition */}
-          {(selectedSpecialites.length > 0 ||
+          {(selectedSpecialties.length > 0 ||
             selectedLocations.length > 0 ||
             ratingMin ||
             ratingMax ||
@@ -241,11 +241,14 @@ const Filters = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Filter by Location */}
           <div className="relative">
-            <label htmlFor="locationInput" className="block mb-1 text-md font-medium text-gray-700">
+            <label
+              htmlFor="locationInput"
+              className="block mb-1 text-md font-medium text-gray-700"
+            >
               Location
             </label>
             <input
-            id="locationInput"
+              id="locationInput"
               value={locationInput}
               onChange={handleLocationInputChange}
               className="w-full p-2 border border-gray-300 rounded bg-white text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
@@ -332,9 +335,9 @@ const Filters = ({
               </ul>
             )}
             {/* Selected Specialities */}
-            {selectedSpecialites.length > 0 && (
+            {selectedSpecialties.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-2">
-                {selectedSpecialites.map((spec) => (
+                {selectedSpecialties.map((spec) => (
                   <span
                     key={spec}
                     className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium"

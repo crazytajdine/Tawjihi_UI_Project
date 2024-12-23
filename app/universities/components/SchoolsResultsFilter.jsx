@@ -10,7 +10,7 @@ const SchoolsResultsFilter = ({ schools, openPopup }) => {
   const [filteredSchools, setFilteredSchools] = useState(schools);
 
   // State for selected specialities
-  const [selectedSpecialites, setSelectedSpecialites] = useState([]);
+  const [selectedSpecialties, setSelectedSpecialties] = useState([]);
 
   // State for selected locations
   const [selectedLocations, setSelectedLocations] = useState([]);
@@ -28,8 +28,8 @@ const SchoolsResultsFilter = ({ schools, openPopup }) => {
   const [salaryMax, setSalaryMax] = useState("");
 
   // Extract unique specialities from the schools data
-  const uniqueSpecialites = useMemo(() => {
-    const allSpecs = schools.flatMap((school) => school.specialites);
+  const uniqueSpecialties = useMemo(() => {
+    const allSpecs = schools.flatMap((school) => school.specialties);
     return Array.from(new Set(allSpecs));
   }, [schools]);
 
@@ -38,9 +38,9 @@ const SchoolsResultsFilter = ({ schools, openPopup }) => {
     let filtered = schools;
 
     // Filter by selected specialities
-    if (selectedSpecialites.length > 0) {
+    if (selectedSpecialties.length > 0) {
       filtered = filtered.filter((school) =>
-        school.specialites.some((spec) => selectedSpecialites.includes(spec))
+        school.specialties.some((spec) => selectedSpecialties.includes(spec))
       );
     }
 
@@ -121,7 +121,7 @@ const SchoolsResultsFilter = ({ schools, openPopup }) => {
 
     setFilteredSchools(filtered);
   }, [
-    selectedSpecialites,
+    selectedSpecialties,
     selectedLocations,
     ratingMin,
     ratingMax,
@@ -136,9 +136,9 @@ const SchoolsResultsFilter = ({ schools, openPopup }) => {
     <div className="w-full px-6 py-4">
       <Filters
         count={filteredSchools.length}
-        uniqueSpecialites={uniqueSpecialites}
-        selectedSpecialites={selectedSpecialites}
-        setSelectedSpecialites={setSelectedSpecialites}
+        uniqueSpecialties={uniqueSpecialties}
+        selectedSpecialties={selectedSpecialties}
+        setSelectedSpecialties={setSelectedSpecialties}
         selectedLocations={selectedLocations}
         setSelectedLocations={setSelectedLocations}
         ratingMin={ratingMin}
