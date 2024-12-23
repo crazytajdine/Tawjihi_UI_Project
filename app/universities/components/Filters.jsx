@@ -251,6 +251,7 @@ const Filters = ({
               id="locationInput"
               value={locationInput}
               onChange={handleLocationInputChange}
+              autoComplete="off"
               className="w-full p-2 border border-gray-300 rounded bg-white text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               type="text"
               placeholder="Type to search..."
@@ -309,6 +310,7 @@ const Filters = ({
             <input
               type="text"
               id="speciality"
+              autoComplete="off"
               value={specialityInput}
               onChange={handleSpecialityInputChange}
               className="block w-full border border-gray-300 rounded-md p-2 bg-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"
