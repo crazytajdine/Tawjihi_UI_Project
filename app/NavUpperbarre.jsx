@@ -25,10 +25,10 @@ export const NavUpperbarre = () => {
         </Link>
 
         <Link
-          href={"/Specialites"}
+          href={"/bourses"}
           className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
-          Spécialités
+          Bourses
         </Link>
 
         <Link
