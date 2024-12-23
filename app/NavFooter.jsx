@@ -44,7 +44,7 @@ export const NavFooter = () => {
         </Link>
 
         <Link
-          href={"/blog"}
+          href={"/events"}
           className="items-center gap-[5.62px] p-[5.62px] self-stretch w-full flex relative flex-[0_0_auto]"
         >
           <div className="relative w-fit mt-[-0.56px] [font-family:'Inria_Sans-Regular',Helvetica] font-normal text-collection-1-white text-[22.5px] tracking-[0] leading-[normal] whitespace-nowrap">
