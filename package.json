@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "proxy": "http://127.0.0.1:5000",
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.15",
     "@fullcalendar/interaction": "^6.1.15",
@@ -29,4 +30,5 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }
+
 }
