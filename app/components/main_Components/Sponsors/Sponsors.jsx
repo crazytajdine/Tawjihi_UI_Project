@@ -5,12 +5,12 @@ export const Sponsors = () => {
   return (
     <div className="flex flex-col items-center gap-4 px-0 py-[25px] relative">
       <div className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]">
-        <div className="relative w-fit mt-[-1.00px] [font-family:'Inter-Regular',Helvetica] font-normal text-m-3black text-5xl tracking-[0] leading-[normal]">
+        <div className=" mt-[60px] relative w-fit  [font-family:'Inter-Regular',Helvetica] font-normal text-m-3black text-5xl tracking-[0] leading-[normal]">
           Nos partenaires
         </div>
       </div>
 
-      <div className="flex items-center justify-center relative self-stretch w-full ">
+      <div className="flex mt-[50px] items-center justify-center relative self-stretch w-full ">
         {sponsors.map((sponsor, index) => (
           <div key={index} className="relative group">
             <Image

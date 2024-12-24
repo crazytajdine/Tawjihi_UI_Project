@@ -43,11 +43,11 @@ export default function University() {
   }, []); // Re-run when queryName changes
 
   return (
-    <div className="flex flex-col w-full items-center gap-[86px] relative bg-[color:var(--collection-1-TEXT)]">
+    <div className="flex flex-col w-full items-center gap-[1px] relative bg-[color:var(--collection-1-TEXT)]">
       <NavUpperbarre />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-full items-center gap-[86px] relative bg-[color:var(--collection-1-TEXT)]"
+        className="flex flex-col w-full items-center gap-[1px] relative bg-[color:var(--collection-1-TEXT)]"
       >
         <SearchBar schoolname={queryName} register={register} />
         <SchoolsResultsFilter

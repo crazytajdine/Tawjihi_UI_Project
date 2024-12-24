@@ -15,10 +15,10 @@ export default function SearchBar({ schoolname, register }) {
   return (
     <div className="w-full relative h-[210.5px] overflow-hidden shrink-0 flex flex-col items-start justify-center py-0 px-[30px] box-border gap-3 text-left text-[24.52px] text-black font-inria-sans">
       <label htmlFor="inputname">
-        <b className="self-stretch relative text-[32.7px]">Find University</b>
+        <b className="self-stretch relative text-[32.7px]">Trouver des universités</b>
       </label>
       <label htmlFor="inputname" className="self-stretch relative">
-        University name
+        Nom de l'université
       </label>
       <div className="w-full h-[79px] flex flex-row items-center justify-between max-w-[557.26px] ">
         <input

@@ -9,7 +9,7 @@ export default function Filters({
   onFilterDate,
 }) {
   return (
-    <div className="w-full max-w-4xl flex flex-col md:flex-row items-center gap-4">
+    <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 py-4">
       {/* Recherche par nom */}
       <div className="flex flex-col md:flex-row items-center gap-2">
         <input
@@ -21,7 +21,14 @@ export default function Filters({
         />
         <button
           onClick={onSearch}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          className="
+            px-4 py-2
+            rounded-md
+            text-white
+            hover:bg-opacity-90
+            transition-colors
+            bg-[var(--collection-1-secondary)]
+          "
         >
           Rechercher
         </button>
@@ -37,7 +44,14 @@ export default function Filters({
         />
         <button
           onClick={onFilterDate}
-          className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
+          className="
+            px-4 py-2
+            rounded-md
+            text-white
+            hover:bg-opacity-90
+            transition-colors
+            bg-[var(--collection-1-secondary)]
+          "
         >
           Filtrer par date
         </button>

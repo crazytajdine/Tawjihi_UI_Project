@@ -15,7 +15,13 @@ const Events = () => {
     });
   }, []);
   return (
-    <div className="w-full relative flex flex-row items-center justify-between py-0 px-[60px] box-border text-center text-5xl-4 text-white font-inria-sans">
+    <div className=" w-full mt-[15px] relative
+    flex flex-row items-center
+    justify-center
+    space-x-16
+    py-0 px-[60px]
+    box-border text-center
+    text-5xl-4 text-white font-inria-sans">
       {events.map((event, index) => {
         return <CardEvent key={index} event={event} />;
       })}

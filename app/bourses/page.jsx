@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import BourseCard from "./components/BourseCard";
 import Filters from "./components/Filters";
-import boursesData from "../../jsondb/bourses.json"; // Importe les données du fichier JSON
+import boursesData from "../../jsondb/bourses.json"; // Importe ton JSON
 import { NavUpperbarre } from "../NavUpperbarre";
 import { NavFooter } from "../NavFooter";
 
@@ -13,14 +13,14 @@ export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterDate, setFilterDate] = useState("");
 
-  // Charger les données du fichier JSON lors du montage
+  // Charger les données JSON
   useEffect(() => {
     const data = Array.isArray(boursesData) ? boursesData : [];
     setBourses(data);
     setFilteredBourses(data);
   }, []);
 
-  // Gestion de la recherche par nom
+  // Recherche par nom
   const handleSearch = () => {
     if (searchTerm.trim()) {
       const filtered = bourses.filter((bourse) =>
@@ -28,47 +28,61 @@ export default function Page() {
       );
       setFilteredBourses(filtered);
     } else {
-      setFilteredBourses(bourses); // Réinitialise les résultats si le champ est vide
+      setFilteredBourses(bourses);
     }
   };
 
-  // Gestion du filtrage par date
+  // Filtrage par date
   const handleFilterDate = () => {
     if (filterDate.trim()) {
       const filtered = bourses.filter((bourse) => {
-        if (!bourse.date_limite || bourse.date_limite === "DÃ©lai de candidature Ã©chu") {
+        if (
+          !bourse.date_limite ||
+          bourse.date_limite === "DÃ©lai de candidature Ã©chu"
+        ) {
           return false;
         }
         return new Date(bourse.date_limite) <= new Date(filterDate);
       });
       setFilteredBourses(filtered);
     } else {
-      setFilteredBourses(bourses); // Réinitialise les résultats si le champ est vide
+      setFilteredBourses(bourses);
     }
   };
 
   return (
     <div className="w-full flex flex-col items-center gap-6">
-      <NavUpperbarre></NavUpperbarre>
-      <Filters
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        filterDate={filterDate}
-        setFilterDate={setFilterDate}
-        onSearch={handleSearch}
-        onFilterDate={handleFilterDate}
-      />
+      {/* NAVBAR - Ne pas toucher */}
+      <NavUpperbarre />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-6">
+      {/* Filtres (barre de recherche + filtrage) */}
+      {/* On le place dans un conteneur centré */}
+      <div className="w-full max-w-4xl mx-auto">
+        <Filters
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          filterDate={filterDate}
+          setFilterDate={setFilterDate}
+          onSearch={handleSearch}
+          onFilterDate={handleFilterDate}
+        />
+      </div>
+
+      {/* Zone qui affiche les cartes */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6 w-full px-6 pb-10">
         {Array.isArray(filteredBourses) && filteredBourses.length > 0 ? (
           filteredBourses.map((bourse, index) => (
             <BourseCard key={index} bourse={bourse} />
           ))
         ) : (
-          <p className="text-center text-gray-500">Aucune bourse trouvée.</p>
+          <p className="text-center text-gray-500 col-span-full">
+            Aucune bourse trouvée.
+          </p>
         )}
       </div>
-      <NavFooter></NavFooter>
+
+      {/* FOOTER - Ne pas toucher */}
+      <NavFooter />
     </div>
   );
 }

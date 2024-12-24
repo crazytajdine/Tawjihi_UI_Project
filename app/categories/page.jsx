@@ -98,24 +98,39 @@ export default function CategoriesPage() {
 
   return (
     <div className="w-full flex flex-col items-center gap-6">
+      {/* NAVBAR - Ne pas toucher */}
       <NavUpperbarre />
 
-      <div className="p-6">
-        {/* Barre de recherche et filtre par catégorie */}
-        <div className="mb-6 p-6 flex flex-col md:flex-row items-center gap-4 max-w-7xl mx-auto justify-center">
+      <div className="p-6 w-full max-w-7xl mx-auto">
+        {/* Barre de recherche et filtre par catégorie, centrés et stylés */}
+        <div className="mb-6 p-6 flex flex-col md:flex-row items-center gap-4 justify-center">
           <input
             type="text"
             placeholder="Rechercher un métier..."
             value={searchQuery}
             onChange={handleSearch}
-            className="w-[350px] md:w-1/2 lg:w-1/3 p-4 border rounded-md shadow-sm
-                       focus:outline-none focus:ring focus:ring-blue-300"
+            className="
+              w-[350px] md:w-1/2 lg:w-1/3 
+              p-4 
+              border border-gray-300 
+              rounded-md shadow-sm
+              bg-white text-black placeholder-gray-400
+              focus:outline-none 
+              focus:ring focus:ring-blue-300
+            "
           />
           <select
             value={selectedCategory}
             onChange={handleCategoryFilter}
-            className="w-[50px] md:w-1/2 lg:w-1/3 p-4 border rounded-md shadow-sm
-                       focus:outline-none focus:ring focus:ring-blue-300"
+            className="
+              w-[150px] md:w-1/2 lg:w-1/3 
+              p-4 
+              border border-gray-300 
+              rounded-md shadow-sm
+              bg-white text-black
+              focus:outline-none 
+              focus:ring focus:ring-blue-300
+            "
           >
             <option value="">Toutes les catégories</option>
             {categories.map((category) => (
@@ -177,6 +192,7 @@ export default function CategoriesPage() {
         )}
       </div>
 
+      {/* FOOTER - Ne pas toucher */}
       <NavFooter />
     </div>
   );

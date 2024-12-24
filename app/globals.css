@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+}
 :root {
     --collection-1-BARR: rgba(23, 59, 69, 1);
     --collection-1-black60: rgba(27, 31, 32, 0.6);
-    --collection-1-main: rgba(250, 204, 115, 1);
-    --collection-1-secondary: var(--m3-schemes-on-secondary-container);
+    --collection-1-main: #9bc1f3;
+    --collection-1-secondary: rgb(8 51 100);
     --collection-1-TEXT: rgba(255, 255, 255, 1);
     --collection-1-white: var(--collection-1-TEXT);
     --collection-1-white30: rgba(255, 255, 255, 0.3);

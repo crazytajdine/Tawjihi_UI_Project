@@ -10,7 +10,7 @@ const EventFilter = ({ onFilter }) => {
 
   return (
     <div className={styles.filterContainer}>
-      <label htmlFor="search" className={styles.label}>Search Events</label>
+      <label htmlFor="search" className={styles.label}>Rechercher des événements</label>
       <div className={styles.searchBar}>
         <input
           type="text"

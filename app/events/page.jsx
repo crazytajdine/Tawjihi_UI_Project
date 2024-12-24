@@ -22,7 +22,7 @@ const EventsPage = () => {
       <div>
         <NavUpperbarre />
         <main style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-          <h1>Upcoming Events</h1>
+
           <EventFilter onFilter={handleFilter} />
           <EventList events={filteredEvents} />
         </main>

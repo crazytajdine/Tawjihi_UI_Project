@@ -5,16 +5,17 @@
   
   .label {
     display: block;
-    font-size: 1.2rem;
+    font-size: 32.7px;
     font-weight: bold;
     margin-bottom: 8px;
+    padding-bottom: 15px;
   }
   
   .searchBar {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
   }
   
   .input {
@@ -28,8 +29,8 @@
   .button {
     padding: 10px 16px;
     font-size: 1rem;
-    color: #fff;
-    background-color: #fbbf24; /* Light orange */
+    color: white;
+    background-color: var(--collection-1-secondary); /* Light orange */
     border: none;
     border-radius: 4px;
     cursor: pointer;

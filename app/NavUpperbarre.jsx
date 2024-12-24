@@ -25,10 +25,16 @@ export const NavUpperbarre = () => {
         </Link>
 
         <Link
-          href={"/bourses"}
+          href={"/categories"}
           className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
-          Bourses
+          Spécialités
+        </Link>
+        <Link
+          href={"/events"}
+          className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
+        >
+          Evenements
         </Link>
 
         <Link
@@ -38,18 +44,12 @@ export const NavUpperbarre = () => {
           Calendrier
         </Link>
 
-        <Link
-          href={"/categories"}
-          className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
-        >
-          Spécialités
-        </Link>
 
         <Link
-          href={"/events"}
+          href={"/bourses"}
           className="relative w-[100px]  [font-family:'Georgia-Regular',Helvetica] font-normal text-m-3black text-lg tracking-[0] leading-[normal]"
         >
-          Events
+          Bourses
         </Link>
       </div>
 

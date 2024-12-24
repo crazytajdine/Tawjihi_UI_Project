@@ -6,14 +6,14 @@ import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 
 export default function CategoryPage() {
-  const params = useParams(); // Récupère les paramètres
-  const categories = decodeURIComponent(params.categories); // Décodage du nom de la catégorie
+  const params = useParams(); 
+  const categories = decodeURIComponent(params.categories); 
   const [categoryData, setCategoryData] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
     if (!categories) {
-      router.push("/categories"); // Redirige si le paramètre est manquant
+      router.push("/categories");
       return;
     }
 
@@ -38,45 +38,50 @@ export default function CategoryPage() {
     return <p>Chargement...</p>;
   }
 
-  const { main_image, description, jobs } = categoryData;
+  // On ne récupère plus main_image car on ne l’affiche plus
+  const { description, jobs } = categoryData;
 
   return (
     <div className="w-full flex flex-col items-center gap-6">
+      {/* Ne pas toucher */}
+      <NavUpperbarre />
 
+      <div className="p-6 w-full max-w-7xl mx-auto">
+        {/* Titre et description de la catégorie, centrés */}
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold mb-4">{categories}</h1>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">{description}</p>
+        </div>
 
-      <NavUpperbarre></NavUpperbarre>
-    <div className="p-6">
-      {/* Image et description de la catégorie */}
-      <div className="mb-8 text-center">
-        <img
-          src={main_image}
-          alt={categories}
-          className="w-full max-w-4xl mx-auto rounded-md shadow-lg mb-4"
-        />
-        <h1 className="text-3xl font-bold mb-4">{categories}</h1> {/* Nom de catégorie décodé */}
-        <p className="text-gray-600 text-lg">{description}</p>
-      </div>
-
-      {/* Liste des jobs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {jobs.map((job, idx) => (
-          <div key={idx} className="flex p-4 rounded-lg shadow-lg bg-white">
-            {/* Image du job */}
-            <img
-              src={job.image || "/placeholder-image.jpg"}
-              alt={job.title}
-              className="w-24 h-24 object-cover rounded-md mr-4"
-            />
-            {/* Contenu du job */}
-            <div>
-              <h2 className="text-lg font-bold">{job.title}</h2>
-              <p className="text-gray-600 mt-2 text-sm">{job.short_description}</p>
+        {/* Liste des jobs → 3 colonnes sur moyennes/grandes tailles */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {jobs.map((job, idx) => (
+            <div
+              key={idx}
+              className="
+                bg-[var(--collection-1-main)] text-black
+                p-4 rounded-lg shadow-lg
+                transition-all duration-300
+                flex flex-col gap-3
+                hover:shadow-2xl hover:scale-[1.02]
+              "
+            >
+              {/* Image du job, pas trop grande */}
+              <img
+                src={job.image || "/placeholder-image.jpg"}
+                alt={job.title}
+                className="w-full h-32 object-cover rounded-md"
+              />
+              {/* Contenu du job */}
+              <h2 className="text-lg font-bold text-center">{job.title}</h2>
+              <p className="text-sm">{job.short_description}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-      <NavFooter></NavFooter>
+
+      {/* Ne pas toucher */}
+      <NavFooter />
     </div>
   );
 }
